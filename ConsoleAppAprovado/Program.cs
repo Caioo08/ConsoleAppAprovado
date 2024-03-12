@@ -17,17 +17,13 @@ namespace ConsoleAppAprovado
             Console.Write("Qual a porcentagem de presença do aluno: ");
             int presen = int.Parse(Console.ReadLine());
 
-            if(med >= 7 &&  presen >= 75) {
-                Console.Write("O aluno está aprovado!");
-            }else if(med >= 4 && presen >= 75)
+            if (med >= 7 && presen >= 75 || med >= 4 && presen >= 75)
             {
-                Console.Write("O aluno está de recuperação!");
-            }else if(med >= 7 && presen < 75)
+                Console.Write("O aluno está aprovado!");
+            }
+            else if (med >= 7 && presen < 75 || med >= 4 && presen < 75)
             {
                 Console.Write("O aluno está de recuperação");
-            }else if(med>=4 && presen < 75)
-            {
-                Console.Write("O aluno está retido");
             }
             else
             {
